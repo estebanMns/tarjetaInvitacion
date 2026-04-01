@@ -13,18 +13,18 @@ export default function Home() {
   return (
     <div className="h-auto w-full flex flex-col items-center justify-center bg-contain bg-[url(/media/fondo.png)] ">
       {/* esta card es para la foto del bebe */}
-      <div className="w-auto h-full flex flex-col bg-white/20 backdrop-blur-md border border-white/40 shadow-2xl rounded-xl text-[100px] items-center justify-center mt-10 overflow-hidden relative">
+      <div className="w-full h-auto flex flex-col bg-white/20 backdrop-blur-md border border-white/40 shadow-2xl rounded-xl text-[100px] items-center justify-center mt-10 ">
         {/* aqui esta la foto del bebe */}
-        <img src="/media/josue.jpeg" alt="Lian" className="flex object-cover rounded-xl w-[400px] h-[400px] border border-white/40 mt-10" />
+        <img src="/media/josue.jpeg" alt="Lian" className="flex object-cover rounded-xl w-[200px] h-[200px] border border-white/40 mt-10" />
         
         {/* procedemos a realizar la card del nombre y los años que cumple el bebe */}
-        <div className="h-auto w-full flex rounded-xl border-[var(--dbz-outline)]  text-dbz-yellow text-stroke-dbz text-[74px] items-center justify-center p-10">Lian Josue</div>
+        <div className="h-auto w-full flex rounded-xl  text-dbz-yellow text-stroke-dbz text-7xl items-center justify-center p-10">Lian Josue</div>
 
         {/* procedemos a realizar la card de los años que cumple el bebe */}
-      <div className="flex flex-row ites-center justify-center items-end gap-15 -mt-20 p-10 ">
-          <p className="text-dbz-yellow text-stroke-dbz text-[64px]">Cumple</p>
-          <p className="text-dbz-yellow text-stroke-dbz text-[120px]">1</p>
-          <p className="text-dbz-yellow text-stroke-dbz text-[64px]">Añito</p>
+      <div className="flex flex-row ites-center justify-center items-end gap-10 -mt-20 p-10 ">
+          <p className="text-dbz-yellow text-stroke-dbz text-6xl">Cumple</p>
+          <p className="text-dbz-yellow text-stroke-dbz text-6xl">1</p>
+          <p className="text-dbz-yellow text-stroke-dbz text-6xl">Añito</p>
       </div>
       </div>
       
@@ -35,27 +35,28 @@ export default function Home() {
         <img src="/media/lian2.jpeg" alt="fotos Lian2" className="w-[500px] h-[500px] object-cover rounded-xl"/>
       </div>
 
-      <div className="flex items-center justify-center -mt-70">
+      <div className=" flex items-center justify-center -mt-50">
         <img src="/media/goku.png" alt="goku" />
       </div>
 
        {/* realizamos una card con la informacion del dia la hora y lugar del evento */}
-      <div className="w-auto h-full flex flex-col rounded-xl text-dbz-yellow text-stroke-dbz -mt-150 border border-white/40 rounded-xl p-10 bg-white/20 backdrop-blur-md shadow-2xl">
+      <div className="w-auto h-full flex flex-col rounded-xl text-dbz-yellow text-stroke-dbz border border-white/40 rounded-xl p-10 bg-white/20 backdrop-blur-md shadow-2xl -mt-90">
         
-        <p className="flex -translate-x-60 -translate-y-30 text-[90px] rotate-270">Abril</p>
-        <p className="flex translate-x-25 -translate-y-40 text-[50px]">Sabado</p>
-        <p className="flex translate-x-25 -translate-y-45 text-[180px]">25</p>
-        <p className="flex translate-x-100 -translate-y-126 text-[50px]">Hora</p>
-        <p className="flex translate-x-90 -translate-y-120 text-[100px]">01:00</p>
+        <p className="flex -translate-x-40 -translate-y-20 text-7xl rotate-270">Abril</p>
+        <p className="flex translate-x-20 -translate-y-20 text-4xl">Sabado</p>
+        <p className="flex text-8xl ml-20 -mt-15">25</p>
+        <p className="flex text-7xl pl-60 -translate-y-40">Hora</p>
+        <p className="flex text-7xl pl-60 -translate-y-40">01:00</p>
+        <p className="flex text-6xl pl-70 -translate-y-40">PM</p>
       
-        <div className="flex border-dashed border-black/40 border-t-4 -mt-60 -translate-y-50"></div>  
-        <div className="w-73 flex rotate-90 border-dashed border-black/40 border-t-4 translate-x-45 -translate-y-90"></div>
-        <p className="flex translate-x-10 -translate-y-50 text-[120px]">Dirección</p>
-        <p className="flex text-[40px] translate-x-1 -translate-y-50">Salon cultural B/ Sol de Oriente</p>
+        <div className="flex border-dashed border-black/40 border-t-4 -mt-40 "></div>  
+        <div className="w-50 flex rotate-90 border-dashed border-black/40 border-t-4 translate-x-30 -mt-28"></div>
+        <p className="flex justify-center  text-7xl mt-30">Dirección</p>
+        <p className="flex justify-center text-2xl items-center mt-4 ">Salon cultural B/ Sol de Oriente</p>
         {/* aqui se crea el boton para que rediriga a la ubiacaion del lugar del evento por medi de google maps */}
         <button 
           onClick={mapa}
-          className="w-60 flex text-[20px] items-center justify-center border border-white/40 rounded-xl p-2 bg-white/20 backdrop-blur-md shadow-2xl active:scale-95 hover:bg-white/30 transition-all duration-200 text-dbz-yellow text-stroke-dbz translate-x-40 -translate-y-50 cursor-pointer mt-10"
+          className=" flex text-[20px] items-center justify-center translate-y-10 border border-white/40 rounded-xl p-2 bg-white/20 backdrop-blur-md shadow-2xl active:scale-95 hover:bg-white/30 transition duration-200 text-dbz-yellow text-stroke-dbz cursor-pointer -mt-8 mb-8"
         >📍Ver Ubicación</button>
       </div>
       
