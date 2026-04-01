@@ -11,7 +11,7 @@ export default function Home() {
   };
 
   return (
-    <div className="min-h-screen w-auto flex flex-col items-center justify-center bg-contain bg-[url(/media/fondo.png)] ">
+    <div className="h-auto w-full flex flex-col items-center justify-center bg-contain bg-[url(/media/fondo.png)] ">
       {/* esta card es para la foto del bebe */}
       <div className="w-auto h-full flex flex-col bg-white/20 backdrop-blur-md border border-white/40 shadow-2xl rounded-xl text-[100px] items-center justify-center mt-10 overflow-hidden relative">
         {/* aqui esta la foto del bebe */}
