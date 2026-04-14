@@ -1,11 +1,27 @@
 "use client";
 import Image from "next/image";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const audio = new Audio("/media/goku.mp3");
+    audio.loop = true;
+    audio.play().catch((error) => {
+      console.log("Autoplay blocked:", error);
+    });
+  }, []);
+
   const mapa = () => {
     // Asegúrate de usar una URL válida de Google Maps aquí
-    const MapsUrl = "https://maps.google.com/?q=Salon+cultural+Sol+de+Oriente+Pasto";
+    const MapsUrl = "https://maps.google.com/?q=+Pasto+calle+39A";
     window.open(MapsUrl, "_blank");
+  };
+
+  const confirmarAsistencia = () => {
+    const phoneNumber = "573148762586"; // Tu número de WhatsApp
+    const message = "Confirmo asistencia al cumpleaños de Liam Josue";
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+    window.open(whatsappUrl, "_blank");
   };
 
   return (
@@ -40,7 +56,7 @@ export default function Home() {
 
       {/* CARD DE INFORMACIÓN - Simplificada para que no se rompa */}
       <div className="w-full max-w-md bg-white/5  border border-white/40 rounded-2xl p-8 shadow-2xl text-dbz-yellow text-stroke-dbz text-center">
-        {/* PERSONAJE - Quitamos el margen negativo excesivo */}
+        
         <div className="w-48 md:w-64 items-center mx-auto -mt-20">
           <img src="/media/goku.png" alt="goku" className="w-full h-auto" />
         </div>
@@ -78,7 +94,16 @@ export default function Home() {
       </div>
       
       {/* ESPACIADOR FINAL */}
-      <div className="h-20"></div>
+      <div className="w-full max-w-md bg-white/5  border border-white/40 rounded-2xl p-8 shadow-2xl text-dbz-yellow text-stroke-dbz text-center">
+        <p>¡Te Esperamos!</p>
+
+        <button 
+          onClick={confirmarAsistencia}
+          className="w-full py-3 bg-white/30 border border-white/50 rounded-xl shadow-lg active:scale-95 hover:bg-white/40 transition text-2xl"
+        >
+           Confirmar Asistencia
+        </button>
+      </div>
     </div>
   );
 }
