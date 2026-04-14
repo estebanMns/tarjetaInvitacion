@@ -3,13 +3,6 @@ import Image from "next/image";
 import { useEffect } from "react";
 
 export default function Home() {
-  useEffect(() => {
-    const audio = new Audio("/media/goku.mp3");
-    audio.loop = true;
-    audio.play().catch((error) => {
-      console.log("Autoplay blocked:", error);
-    });
-  }, []);
 
   const mapa = () => {
     // Asegúrate de usar una URL válida de Google Maps aquí
@@ -18,7 +11,7 @@ export default function Home() {
   };
 
   const confirmarAsistencia = () => {
-    const phoneNumber = "573148762586"; // Tu número de WhatsApp
+    const phoneNumber = "573163512852"; // Tu número de WhatsApp
     const message = "Confirmo asistencia al cumpleaños de Liam Josue";
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(whatsappUrl, "_blank");
