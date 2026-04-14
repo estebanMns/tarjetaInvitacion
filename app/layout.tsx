@@ -13,6 +13,11 @@ export const metadata: Metadata = {
   description: "a celebrar su primer añito",
 };
 
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1,
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -20,7 +25,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="en"
+      lang="es"
       className={`${modak.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>

@@ -1,71 +1,82 @@
 "use client";
-
 import Image from "next/image";
 
 export default function Home() {
-
-  {/* esta esla funcion para que funcione el boton de la ubiaciacion del lugar del evento */}
   const mapa = () => {
-    const MapsUrl = "https://www.google.com/maps/search/?api=1&query=calle+39A+pasto+colombia";
+    // Asegúrate de usar una URL válida de Google Maps aquí
+    const MapsUrl = "https://maps.google.com/?q=Salon+cultural+Sol+de+Oriente+Pasto";
     window.open(MapsUrl, "_blank");
   };
 
   return (
-    <div className="h-auto w-full flex flex-col items-center justify-center bg-contain bg-[url(/media/fondo.png)] ">
-      {/* esta card es para la foto del bebe */}
-      <div className="w-auto h-full flex flex-col bg-white/20 backdrop-blur-md border border-white/40 shadow-2xl rounded-xl text-[100px] items-center justify-center mt-10 ">
-        {/* aqui esta la foto del bebe */}
-        <img src="/media/josue.jpeg" alt="Lian" className="flex object-cover rounded-xl w-[200px] h-[200px] border border-white/40 mt-10" />
+    // Cambié h-auto por min-h-screen y añadí padding (p-4) para que nada toque los bordes en móvil
+    <div className="min-h-screen w-full flex flex-col items-center bg-cover bg-center bg-[url(/media/fondo2.png)] p-4 space-y-10">
+      
+      {/* CARD PRINCIPAL - Foto y Nombre */}
+      <div className="w-full max-w-md flex flex-col items-center bg-white/5  border border-white/40 shadow-2xl rounded-2xl p-6 mt-10">
+        <div className="relative w-48 h-48 border-4 border-white/40 rounded-xl overflow-hidden shadow-xl">
+          <Image 
+            src="/media/josue.jpeg" 
+            alt="Lian" 
+            fill 
+            className="object-cover"
+          />
+        </div>
         
-        {/* procedemos a realizar la card del nombre y los años que cumple el bebe */}
-        <div className="h-auto w-full flex rounded-xl  text-dbz-yellow text-stroke-dbz text-6xl items-center justify-center p-10">Lian Josue</div>
+        <h1 className="text-dbz-yellow text-stroke-dbz text-5xl md:text-6xl text-center mt-6">
+          Lian Josue
+        </h1>
 
-        {/* procedemos a realizar la card de los años que cumple el bebe */}
-      <div className="flex flex-row ites-center justify-center items-end gap-10 -mt-20 p-10 ">
-          <p className="text-dbz-yellow text-stroke-dbz text-5xl">Cumple</p>
-          <p className="text-dbz-yellow text-stroke-dbz text-5xl">1</p>
-          <p className="text-dbz-yellow text-stroke-dbz text-5xl">Añito</p>
+        <div className="flex flex-row items-center gap-4 mt-4">
+          <p className="text-dbz-yellow text-stroke-dbz text-3xl">Cumple</p>
+          <span className="text-dbz-yellow text-stroke-dbz text-6xl">1</span>
+          <p className="text-dbz-yellow text-stroke-dbz text-3xl">Añito</p>
+        </div>
       </div>
+
+      {/* GALERÍA DE FOTOS */}
+      <div className="w-full max-w-md flex flex-col items-center gap-6 p-6 bg-white/5  border border-white/40 rounded-2xl shadow-2xl">
+        {/* Cambié las imágenes a w-full para que se adapten al ancho del celular */}
+        <img src="/media/lian1.jpeg" alt="Lian 1" className="w-full h-auto object-cover rounded-xl shadow-lg"/>
+        <img src="/media/lian2.jpeg" alt="Lian 2" className="w-full h-auto object-cover rounded-xl shadow-lg"/>
       </div>
+
       
-      
-      {/* procedemos a mostrar las fotos del bebe */}
-      <div className="w-auto h-full flex flex-col items-center justify-center gap-10 mt-20 border border-white/40 rounded-xl p-10 bg-white/20 backdrop-blur-md shadow-2xl">
-        <img src="/media/lian1.jpeg" alt="fotos Lian1" className="w-[370px] h-[400px] object-cover rounded-xl"/>
-        <img src="/media/lian2.jpeg" alt="fotos Lian2" className="w-[370px] h-[400px] object-cover rounded-xl"/>
-      </div>
 
-      <div className=" flex items-center justify-center -mt-50">
-        <img src="/media/goku.png" alt="goku" />
-      </div>
+      {/* CARD DE INFORMACIÓN - Simplificada para que no se rompa */}
+      <div className="w-full max-w-md bg-white/5  border border-white/40 rounded-2xl p-8 shadow-2xl text-dbz-yellow text-stroke-dbz text-center">
+        {/* PERSONAJE - Quitamos el margen negativo excesivo */}
+        <div className="w-48 md:w-64 items-center mx-auto -mt-20">
+          <img src="/media/goku.png" alt="goku" className="w-full h-auto" />
+        </div>
+        <div className="grid grid-cols-2 gap-4 mb-6 -mt-30">
+          <div className="border-r-2 border-dashed border-black/30 ">
+            <p className="text-2xl">Sábado</p>
+            <p className="text-6xl ">25</p>
+            <p className="text-3xl">Abril</p>
+          </div>
+          <div className="flex flex-col justify-center">
+            <p className="text-2xl">Hora</p>
+            <p className="text-4xl">01:00</p>
+            <p className="text-2xl">PM</p>
+          </div>
+        </div>
 
-       {/* realizamos una card con la informacion del dia la hora y lugar del evento */}
-      <div className="w-auto h-full flex flex-col rounded-xl text-dbz-yellow text-stroke-dbz border border-white/40 rounded-xl p-10 bg-white/20 backdrop-blur-md shadow-2xl -mt-90">
+        <div className="border-t-2 border-dashed border-black/20 my-4"></div>
+
+        <h2 className="text-4xl mt-4">Dirección</h2>
+        <p className="text-xl mt-2 mb-6">Salón cultural B/ Sol de Oriente</p>
         
-        <p className="flex -translate-x-40 -translate-y-25 text-6xl rotate-270">Abril</p>
-        <p className="flex translate-x-15 -translate-y-20 text-4xl">Sabado</p>
-        <p className="flex text-8xl ml-15 -mt-15">25</p>
-        <p className="flex text-5xl pl-60 -translate-y-40">Hora</p>
-        <p className="flex text-5xl pl-60 -translate-y-40">01:00</p>
-        <p className="flex text-5xl pl-65 -translate-y-40">PM</p>
-      
-        <div className="flex border-dashed border-black/40 border-t-4 -mt-40 "></div>  
-        <div className="w-35 flex rotate-90 border-dashed border-black/40 border-t-4 translate-x-35 -mt-22"></div>
-        <p className="flex justify-center  text-7xl mt-30">Dirección</p>
-        <p className="flex justify-center text-2xl items-center mt-4 ">Salon cultural B/ Sol de Oriente</p>
-        {/* aqui se crea el boton para que rediriga a la ubiacaion del lugar del evento por medi de google maps */}
         <button 
           onClick={mapa}
-          className=" flex text-[20px] items-center justify-center translate-y-10 border border-white/40 rounded-xl p-2 bg-white/20 backdrop-blur-md shadow-2xl active:scale-95 hover:bg-white/30 transition duration-200 text-dbz-yellow text-stroke-dbz cursor-pointer -mt-8 mb-8"
-        >📍Ver Ubicación</button>
+          className="w-full py-3 bg-white/30 border border-white/50 rounded-xl shadow-lg active:scale-95 hover:bg-white/40 transition text-2xl"
+        >
+          📍 Ver Ubicación
+        </button>
       </div>
       
-      {/* esta es la card final de te esperamos*/}
-      <div className="w-auto h-full flex flex-col items-center justify-center text-dbz-yellow text-stroke-dbz border border-white/40 rounded-xl bg-white/20 backdrop-blur-md shadow-2xl mt-20">
-        
-        <div className="flex border-dashed border-black/40 border-t-4 -mt- -translate-y-"></div> 
-      </div> 
-      
+      {/* ESPACIADOR FINAL */}
+      <div className="h-20"></div>
     </div>
   );
 }
