@@ -24,7 +24,7 @@ export default function Home() {
         </div>
         
         <h1 className="text-dbz-yellow text-stroke-dbz text-5xl md:text-6xl text-center mt-6">
-          Lian Josue
+          Liam Josue
         </h1>
 
         <div className="flex flex-row items-center gap-4 mt-4">
@@ -34,12 +34,7 @@ export default function Home() {
         </div>
       </div>
 
-      {/* GALERÍA DE FOTOS */}
-      <div className="w-full max-w-md flex flex-col items-center gap-6 p-6 bg-white/5  border border-white/40 rounded-2xl shadow-2xl">
-        {/* Cambié las imágenes a w-full para que se adapten al ancho del celular */}
-        <img src="/media/lian1.jpeg" alt="Lian 1" className="w-full h-auto object-cover rounded-xl shadow-lg"/>
-        <img src="/media/lian2.jpeg" alt="Lian 2" className="w-full h-auto object-cover rounded-xl shadow-lg"/>
-      </div>
+      
 
       
 
@@ -73,6 +68,13 @@ export default function Home() {
         >
           📍 Ver Ubicación
         </button>
+      </div>
+
+      {/* GALERÍA DE FOTOS */}
+      {/*<div className="w-full max-w-md flex flex-col items-center gap-6 p-6 bg-white/5  border border-white/40 rounded-2xl shadow-2xl">*/}
+        {/* Cambié las imágenes a w-full para que se adapten al ancho del celular */}
+        {/*<img src="/media/lian1.jpeg" alt="Lian 1" className="w-full h-auto object-cover rounded-xl shadow-lg"/>
+        {/*<img src="/media/lian2.jpeg" alt="Lian 2" className="w-full h-auto object-cover rounded-xl shadow-lg"/>
       </div>
       
       {/* ESPACIADOR FINAL */}
