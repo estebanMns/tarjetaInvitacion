@@ -1,12 +1,12 @@
 "use client";
 import Image from "next/image";
-import { useEffect } from "react";
+
 
 export default function Home() {
-
+ 
   const mapa = () => {
-    // Asegúrate de usar una URL válida de Google Maps aquí
-    const MapsUrl = "https://maps.google.com/?q=+Pasto+calle+39A";
+    // Enlace a la ubicación exacta en Pasto, calle 39A
+    const MapsUrl = "https://maps.google.com/?q=1.236875,-77.270922";
     window.open(MapsUrl, "_blank");
   };
 
@@ -97,6 +97,10 @@ export default function Home() {
            Confirmar Asistencia
         </button>
       </div>
+       <div>
+          <p className="text-1xl text-dbz-yellow">Diseñado por: Esteban Meneses</p>
+          <p className="text-1xl text-dbz-yellow">Contacto: 3148762586</p>
+        </div>
     </div>
   );
 }
