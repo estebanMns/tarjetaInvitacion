@@ -97,9 +97,9 @@ export default function Home() {
            Confirmar Asistencia
         </button>
       </div>
-       <div>
-          <p className="text-1xl text-dbz-yellow">Diseñado por: Esteban Meneses</p>
-          <p className="text-1xl text-dbz-yellow">Contacto: 3148762586</p>
+       <div className="w-full max-w-md bg-white/5  border border-white/40 rounded-2xl p-8 shadow-2xl text-dbz-yellow text-stroke-dbz text-center">
+          <p className="text-1xl ">Diseñado por: Esteban Meneses</p>
+          <p className="text-1xl ">Contacto: 3148762586</p>
         </div>
     </div>
   );
