@@ -131,8 +131,8 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-4 mb-6 -mt-30">
           <div className="border-r-2 border-dashed border-black/30 ">
             <p className="text-2xl">Domingo</p>
-            <p className="text-6xl ">26</p>
-            <p className="text-3xl">Abril</p>
+            <p className="text-6xl ">03</p>
+            <p className="text-3xl">Mayo</p>
           </div>
           <div className="flex flex-col justify-center">
             <p className="text-2xl">Hora</p>
